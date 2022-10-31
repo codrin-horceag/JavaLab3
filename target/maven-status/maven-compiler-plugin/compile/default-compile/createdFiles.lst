@@ -1,0 +1,8 @@
+com\example\lab3\model\Championship.class
+com\example\lab3\TeamsServlet.class
+com\example\lab3\controller\TeamsController.class
+com\example\lab3\service\GenerateChampionship.class
+com\example\lab3\model\Combination.class
+com\example\lab3\model\Team.class
+com\example\lab3\model\City.class
+com\example\lab3\repository\TeamsDB.class
