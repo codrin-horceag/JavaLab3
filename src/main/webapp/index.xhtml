@@ -8,7 +8,7 @@
 <h:head></h:head>
 <h:body>
     <p:commandButton value="Add" type="button"  onclick="PF('dlg3').show()"/>
-    <p:commandButton value="Championship" action="#{TeamsController.generateChampionship}"/>
+    <p:commandButton value="Championship" action="#{TeamsController.generateChampionship()}"/>
     <h:form>
         <div class="card">
             <p:dataTable var="team" value="#{TeamsController.teams}">

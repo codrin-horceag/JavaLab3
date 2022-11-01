@@ -3,7 +3,7 @@ package com.example.lab3.controller;
 import com.example.lab3.model.Championship;
 import com.example.lab3.model.Team;
 import com.example.lab3.repository.TeamsDB;
-import com.example.lab3.service.GenerateChampionship;
+import com.example.lab3.service.ChampionshipService;
 
 import javax.annotation.ManagedBean;
 import javax.annotation.PostConstruct;
@@ -67,8 +67,8 @@ public class TeamsController implements Serializable {
         this.selectedTeamCity = selectedTeamCity;
     }
     public void generateChampionship() throws IOException {
-        GenerateChampionship generateChampionship = new GenerateChampionship(teams);
-        this.combinationList = generateChampionship.getCombinationList();
+        ChampionshipService championshipService = new ChampionshipService(teams);
+        this.combinationList = championshipService.getCombinationList();
         System.out.println(this.combinationList);
         FacesContext.getCurrentInstance().getExternalContext().redirect("championship.xhtml");
     }
