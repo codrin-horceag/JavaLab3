@@ -1,4 +1,4 @@
-Laboratorul 3 pentru Java Technologies (Compulsory + Homework + Bonus).
+Laboratorul 3 pentru Java Technologies (Compulsory + Homework + Bonus), Laboratorul 4 Compulsory.
 
 Am creat baza de date, ce contine tabelele Teams si City.
 Am folosit PrimeFaces pentru a afisa datele intr-un data-table si a crea un modal cu scopul de a adauga o echipa noua.
