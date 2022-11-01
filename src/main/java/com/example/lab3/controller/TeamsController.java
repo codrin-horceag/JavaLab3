@@ -66,7 +66,7 @@ public class TeamsController implements Serializable {
     public void setSelectedTeamCity(Long selectedTeamCity) {
         this.selectedTeamCity = selectedTeamCity;
     }
-    public void generateChampionShip() throws IOException {
+    public void generateChampionship() throws IOException {
         GenerateChampionship generateChampionship = new GenerateChampionship(teams);
         this.combinationList = generateChampionship.getCombinationList();
         System.out.println(this.combinationList);
