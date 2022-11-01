@@ -16,15 +16,17 @@ public class TeamsDB {
         getConnection();
     }
 
+    //compulsory lab4
     public Connection getConnection() {
-        Connection con = null;
+        javax.naming.InitialContext ctx = null;
         try {
-            Class.forName("org.postgresql.Driver");
-            connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/lab3", "postgres", "1234");
-        } catch (Exception e) {
-            System.out.println(e);
+            ctx = new javax.naming.InitialContext();
+            javax.sql.DataSource ds = (javax.sql.DataSource)ctx.lookup("jdbc/lab3");
+            return ds.getConnection();
+        } catch (NamingException | SQLException e) {
+            e.printStackTrace();
+            return null;
         }
-        return connection;
     }
 
     public void storeTeam(String teamName, String foundingDate, String cityName) throws SQLException {
